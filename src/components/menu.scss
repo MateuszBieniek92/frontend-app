@@ -21,16 +21,31 @@
       flex-direction: column;
       border-top: 1px solid #d6d6d6;
       margin: -1em 0;
-      &-item {
-
-      }
       &-link {
         padding: 1em 0;
         color: #7e7e7e;
         display: block;
         transition: .3s all;
+        position: relative;
+        &:before {
+          transition: .3s all;
+          width: 0;
+          height: 0;
+          border-top: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+          border-left: 4px solid #003962;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          bottom: 0;
+          transform: translateY(-50%);
+          transition: .3s all;
+        }
         &:hover {
           color: #003962;
+          &:before {
+            content: '';
+          }
         }
       }
     }
