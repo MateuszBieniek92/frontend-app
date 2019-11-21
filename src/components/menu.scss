@@ -1,0 +1,13 @@
+.menu {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
+  &__sidebar {
+    width: 30%;
+  }
+  &__content {
+    flex-grow: 1;
+    background: #e1e8ee;
+    padding: 2em;
+  }
+}
