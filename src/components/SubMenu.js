@@ -1,11 +1,14 @@
 import React from 'react';
 
-export default class SubMenu extends React.Component {
+const SubMenu = (props) => {
 
+    return (
+        <div>
+            {props.subMenu.map((category) => (
+                <p>{category.name}</p>
+            ))}
+        </div>
+    )
+};
 
-    render () {
-        return (
-            <div> SubMenu </div>
-        )
-    }
-}
+export default SubMenu;

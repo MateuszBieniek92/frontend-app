@@ -778,6 +778,110 @@
           ]
         }
       ]
+    },
+    {
+      "id": "2",
+      "name": "Kolejny element",
+      "subMenu": [
+        {
+          "id": "1",
+          "name": "Kategorie",
+          "elements": [
+            {
+              "name": "Element 1",
+              "group": [
+                {
+                  "name": "Grupa 1",
+                  "groupElement": [
+                    "Element Podmenu"
+                  ]
+                },
+                {
+                  "name": "Grupa 2",
+                  "groupElement": [
+                    "XS 30, macro TEST"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Element 2",
+              "group": [
+                {
+                  "name": "Grupa 1",
+                  "groupElement": [
+                    "Element Podmenu"
+                  ]
+                },
+                {
+                  "name": "Grupa 2",
+                  "groupElement": [
+                    "XS 30, macro TEST"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Element 3",
+              "group": [
+                {
+                  "name": "Grupa 1",
+                  "groupElement": [
+                    "Element Podmenu"
+                  ]
+                },
+                {
+                  "name": "Grupa 2",
+                  "groupElement": [
+                    "XS 30, macro TEST"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Kategorie 2",
+          "isActive": "false",
+          "elements": [
+            {
+              "name": "Element 1",
+              "group": [
+                {
+                  "name": "Grupa 1",
+                  "groupElement": [
+                    "Element Podmenu"
+                  ]
+                },
+                {
+                  "name": "Grupa 2",
+                  "groupElement": [
+                    "XS 30, macro TEST"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Element 2",
+              "group": [
+                {
+                  "name": "Grupa 1",
+                  "groupElement": [
+                    "Element Podmenu"
+                  ]
+                },
+                {
+                  "name": "Grupa 2",
+                  "groupElement": [
+                    "XS 30, macro TEST"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
