@@ -1,5 +1,5 @@
 import React from 'react';
-import './menu.scss';
+import './subMenu.scss';
 import {Tabs, Tab, Accordion} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -10,21 +10,21 @@ const SubMenu = (props) => {
             <Tabs className="category-wrapper">
                 {props.subMenu.map((category, id) => (
                     <Tab key={id} eventKey={id} title={category.name}>
-                        <Accordion defaultActiveKey={id}>
+                        <Accordion defaultActiveKey={0}>
                             {category.elements.map((elements, id) => (
                                 <div key={id}>
                                     <Accordion.Toggle eventKey={id} className="accordion__header">
                                         {elements.name}
                                     </Accordion.Toggle>
                                     <Accordion.Collapse eventKey={id} className="accordion__content">
-                                        <div>
+                                        <div className="group-wrapper">
                                             {elements.group.map((group, id) => (
                                                 <div key={id} className="group">
-                                                    <h4>{group.name}</h4>
-                                                    <ul>
+                                                    <h4 className="group__header"> {group.name}</h4>
+                                                    <ul className="group__list">
                                                         {group.groupElement.map((groupItem, id) => (
-                                                            <li  key={id}>
-                                                                <a href={groupItem.name}>{groupItem.name}</a>
+                                                            <li key={id} className="group-wrapper__list__item">
+                                                                <a href="#">{groupItem.name}</a>
                                                             </li>
                                                         ))}
                                                     </ul>

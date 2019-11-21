@@ -1,8 +1,4 @@
-$screen-xxs: "(max-width : 480px)";
-$screen-xs: "(max-width : 767px)";
-$screen-sm: "(max-width : 991px)";
-$screen-md: "(max-width : 1199px)";
-$screen-lg: "(min-width: 1200px)";
+@import './variables';
 
 @font-face {
   font-family: 'Open Sans';

@@ -1,0 +1,104 @@
+@import '../variables';
+
+.menu {
+  &__content {
+    .category-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      list-style-type: none;
+      border-bottom: 0;
+      a {
+        padding: 0.8em 2em;
+        margin-right: 1em;
+        color: $darkBlueColor;
+        cursor: pointer;
+        transition: .3s all;
+        border-radius: 0;
+        border: none;
+        &:before {
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid $darkBlueColor;
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+          transition: .3s all;
+        }
+        &:hover, &.active {
+          background: $whiteColor;
+          position: relative;
+          &:before {
+            content: '';
+
+          }
+        }
+        &.active {
+          cursor: initial;
+        }
+      }
+    }
+  }
+}
+
+.accordion {
+  list-style-type: none;
+  margin-top: 2em;
+  &__header {
+    text-transform: uppercase;
+    text-align: left;
+    flex-grow: 1;
+    padding: 0.8em 0;
+    background: transparent;
+    border: none;
+    color: $lightBlueColor;
+    display: block;
+    border-top: 1px solid $lightBlueColor;
+    letter-spacing: 1px;
+    transition: .3s all;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      color: $darkBlueColor;
+    }
+  }
+  .group-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em -1em;
+    .group {
+      width: 25%;
+      padding: 0 1em;
+      list-style-type: none;
+      text-align: left;
+      &__header {
+        color: $darkBlueColor;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 1em;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+      &__list {
+        list-style-type: none;
+        li {
+          font-size: 13px;
+          letter-spacing: .3px;
+          margin-bottom: 0.4em;
+          a {
+            transition: .3s all;
+            text-decoration: none;
+            color: $darkBlueColor;
+            &:hover {
+              color: $lightBlueColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@import '../variables';
+
 .menu {
   display: flex;
   flex-wrap: nowrap;
@@ -19,11 +21,11 @@
     .nav {
       display: flex;
       flex-direction: column;
-      border-top: 1px solid #d6d6d6;
+      border-top: 1px solid $lightGreyColor;
       margin: -1em 0;
       &-link {
         padding: 1em 0;
-        color: #7e7e7e;
+        color: $greyColor;
         display: block;
         transition: .3s all;
         position: relative;
@@ -33,7 +35,7 @@
           height: 0;
           border-top: 4px solid transparent;
           border-bottom: 4px solid transparent;
-          border-left: 4px solid #003962;
+          border-left: 4px solid $darkBlueColor;
           position: absolute;
           top: 50%;
           right: 0;
@@ -42,7 +44,7 @@
           transition: .3s all;
         }
         &:hover {
-          color: #003962;
+          color: $darkBlueColor;
           &:before {
             content: '';
           }
@@ -52,7 +54,8 @@
   }
   &__content {
     flex-grow: 1;
-    background: #e1e8ee;
+    background: $menuBgColor;
     padding: 2em;
+    position: relative;
   }
 }
