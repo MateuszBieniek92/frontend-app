@@ -40,6 +40,22 @@
         }
       }
     }
+    .close-btn {
+      top: 0.3em;
+      right: 0.3em;
+      border: 1px solid $lightBlueColor;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        color: $lightBlueColor;
+      }
+    }
   }
 }
 

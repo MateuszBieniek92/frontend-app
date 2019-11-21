@@ -1,6 +1,8 @@
 import React from 'react';
 import './subMenu.scss';
 import {Tabs, Tab, Accordion} from 'react-bootstrap';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faTimes} from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SubMenu = (props) => {
@@ -38,6 +40,9 @@ const SubMenu = (props) => {
                     </Tab>
                 ))}
             </Tabs>
+            <div className="close-btn" onClick={() => { props.showSubMenu()}}>
+                <FontAwesomeIcon icon={faTimes}/>
+            </div>
         </div>
     )
 };
