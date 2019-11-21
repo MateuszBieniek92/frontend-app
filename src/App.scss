@@ -1,22 +1,70 @@
-.App {
+$screen-xxs: "(max-width : 480px)";
+$screen-xs: "(max-width : 767px)";
+$screen-sm: "(max-width : 991px)";
+$screen-md: "(max-width : 1199px)";
+$screen-lg: "(min-width: 1200px)";
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Thasadith', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.body {
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+.p-10-r {
+  padding-right: 10px;
+}
+
+.p-10-l {
+  padding-left: 10px;
+}
+
+.image {
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.row {
+  &::after,
+  &::before {
+    display: table;
+    content: '';
+    clear: both;
+  }
+}
+
+.btn-place-center {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
 }

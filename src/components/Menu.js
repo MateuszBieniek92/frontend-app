@@ -1,6 +1,7 @@
 import React from 'react';
 import SubMenu from "./SubMenu";
 import './menu.scss';
+import logo from '../images/example-svg.svg';
 
 import {Tab, Nav} from 'react-bootstrap';
 
@@ -40,14 +41,17 @@ export default class Menu extends React.Component {
         this.setState({
             showMenu: false,
         })
-    }
+    };
 
     render() {
         return (
             <header className="menu">
                 <Tab.Container>
                     <div className="menu__sidebar">
-                        <Nav className="flex-column">
+                        <div className="menu__sidebar__image">
+                            <img src={logo} alt="Example logo"/>
+                        </div>
+                        <Nav>
                             {this.state.menuItems.map((data) => (
                                 <Nav.Item key={data.id}>
                                     <Nav.Link eventKey={data.id} onClick={() => {

@@ -4,6 +4,36 @@
   height: 100vh;
   &__sidebar {
     width: 30%;
+    padding: 1em;
+    &__image {
+      padding-top: 56.25%;
+      position: relative;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .nav {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid #d6d6d6;
+      margin: -1em 0;
+      &-item {
+
+      }
+      &-link {
+        padding: 1em 0;
+        color: #7e7e7e;
+        display: block;
+        transition: .3s all;
+        &:hover {
+          color: #003962;
+        }
+      }
+    }
   }
   &__content {
     flex-grow: 1;
