@@ -61,8 +61,8 @@ export default class Menu extends React.Component {
                             ))}
                         </Nav>
                     </div>
-                    <div className="menu__content">
-                        {this.state.showMenu ? (
+                    {this.state.showMenu ? (
+                        <div className="menu__content">
                             <Tab.Content>
                                 {this.state.menuItems.map((data) => (
                                     <Tab.Pane key={data.id} eventKey={data.id}>
@@ -70,8 +70,9 @@ export default class Menu extends React.Component {
                                     </Tab.Pane>
                                 ))}
                             </Tab.Content>
-                        ) : ''}
-                    </div>
+
+                        </div>
+                    ) : null}
                 </Tab.Container>
             </header>
         )

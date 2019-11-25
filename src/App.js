@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.scss';
 import Menu from './components/Menu';
+import MainSection from './components/MainSection';
 
 function App() {
     return (
-        <Menu/>
+        <main>
+            <Menu/>
+            <MainSection/>
+        </main>
     );
 }
 

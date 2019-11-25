@@ -40,7 +40,7 @@ const SubMenu = (props) => {
                     </Tab>
                 ))}
             </Tabs>
-            <div className="close-btn" onClick={() => { props.showSubMenu()}}>
+            <div className="close-btn" onClick={() => {props.showSubMenu()}}>
                 <FontAwesomeIcon icon={faTimes}/>
             </div>
         </div>
