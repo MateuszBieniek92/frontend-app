@@ -76,6 +76,22 @@
     letter-spacing: 1px;
     transition: .3s all;
     width: 100%;
+    position: relative;
+    &.active {
+      &:before {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+    &:before {
+      content: '\f107';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 600;
+      position: absolute;
+      font-size: 18px;
+      top:50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
     &:focus {
       outline: none;
     }
