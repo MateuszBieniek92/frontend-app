@@ -1,10 +1,9 @@
 import React from 'react';
-import './mainSection.scss';
+import './rightMainSection.scss';
 import sampleImage from '../images/sample-image.png';
 
-function MainSection() {
+function RightMainSection() {
     return (
-
         <section className="main-section">
             <div className="main-section__img-wrapper">
                 <img src={sampleImage} alt="sample-photo"/>
@@ -21,4 +20,4 @@ function MainSection() {
     )
 }
 
-export default MainSection;
+export default RightMainSection;

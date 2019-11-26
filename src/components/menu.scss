@@ -1,6 +1,7 @@
 @import '../variables';
 
 .menu {
+  transition: .8s all;
   @media #{$screen-xs} {
     position: fixed;
     width: 100%;
@@ -10,8 +11,15 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
   }
   &__sidebar {
-    width: 20%;
     padding: 1em;
+    height: 100vh;
+    position: relative;
+    @media #{$screen-lg} {
+      width: 20%;
+    }
+    @media #{$screen-md} {
+      width: 30%;
+    }
     @media #{$screen-xs} {
       display: none;
     }
@@ -19,6 +27,7 @@
       padding-top: 56.25%;
       position: relative;
       overflow: hidden;
+      transition: .5s all;
       img {
         position: absolute;
         top: 50%;
@@ -70,5 +79,51 @@
     top: 0;
     z-index: 2;
     height: 100vh;
+  }
+  &__desktop-btn {
+    font-size: 2em;
+    position: absolute;
+    bottom: 0;
+    right: 4%;
+    cursor: pointer;
+    transition: .3s all;
+    &:hover {
+      color: $yellowColor;
+    }
+  }
+}
+
+.menu--showBar {
+  .menu {
+    width: 4%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    @media #{$screen-md} {
+      width: 6%;
+    }
+    .menu__sidebar {
+      width: 100%;
+      padding: 0.5em;
+      &__image {
+        padding-top: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .nav {
+        display: none;
+      }
+    }
+    .menu__desktop-btn {
+      right: 50%;
+      transform: translate(50%);
+    }
+  }
+  .main-section {
+    width: 96%;
+    left: 4%;
+    @media #{$screen-md} {
+      width: 94%;
+      left: 6%;
+    }
   }
 }

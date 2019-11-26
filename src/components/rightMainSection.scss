@@ -6,6 +6,11 @@
   left: 20%;
   top: 0;
   height: 100vh;
+  transition: .5s all;
+  @media #{$screen-md} {
+    width: 70%;
+    left: 30%;
+  }
   @media #{$screen-xs} {
     position: relative;
     left: 0;
@@ -71,10 +76,15 @@
       left: 50%;
       position: absolute;
       transform: translate(-50%);
-      background: #fcd301;
+      background: $yellowColor;
       font-weight: 600;
       text-transform: uppercase;
       white-space: nowrap;
+      cursor: pointer;
+      transition: .3s all;
+      &:hover {
+        background: darken($yellowColor,8);
+      }
       @media #{$screen-xs} {
         padding: 0.8em 3em;
       }
