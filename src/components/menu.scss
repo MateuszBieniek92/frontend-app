@@ -25,17 +25,27 @@
       height: 60px;
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0.5em;
     }
     &__image {
       padding-top: 56.25%;
       position: relative;
       overflow: hidden;
       transition: .5s all;
+      @media #{$screen-xs} {
+        width: 50px;
+        height: 50px;
+        padding: initial;
+      }
       img {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @media #{$screen-xs} {
+          width: 100%;
+        }
       }
     }
     .nav {
@@ -43,12 +53,39 @@
       flex-direction: column;
       border-top: 1px solid $lightGreyColor;
       margin: -1em 0;
+      @media #{$screen-xs} {
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        background: $whiteColor;
+        border: none;
+        left: 0;
+        transition:  max-height .5s ease-out;
+        max-height: 0;
+        overflow: hidden;
+      }
+      &.mm--active {
+        max-height: 500px;
+        box-shadow: 0 450px 10px 400px rgba(0, 0, 0, 0.3);
+        transition:  max-height .5s ease-out;
+      }
+      .nav-item {
+        @media #{$screen-xs} {
+          border-bottom: 1px solid $lightGreyColor;
+        }
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
       &-link {
         padding: 1em 0;
         color: $greyColor;
         display: block;
         transition: .3s all;
         position: relative;
+        @media #{$screen-xs} {
+          padding: 1em;
+        }
         &:before {
           transition: .3s all;
           width: 0;
@@ -71,6 +108,11 @@
         }
       }
     }
+  }
+  &__mobile-btn {
+    align-self: center;
+    font-size: 2em;
+    margin-right: .1em;
   }
   &__content {
     flex-grow: 1;

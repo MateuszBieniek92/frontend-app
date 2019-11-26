@@ -3,7 +3,7 @@ import SubMenu from "./SubMenu";
 import './menu.scss';
 import logo from '../images/example-svg.svg';
 import logoIcon from '../images/example-icon.png';
-import {faArrowLeft, faArrowRight} from '@fortawesome/free-solid-svg-icons';
+import {faArrowLeft, faArrowRight, faBars} from '@fortawesome/free-solid-svg-icons';
 import {Tab, Nav} from 'react-bootstrap';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import RightMainSection from "./RightMainSection";
@@ -20,7 +20,11 @@ export default class Menu extends React.Component {
             desktopToggleBarArrow: false,
             logoImage: false,
             isMobile: false,
+            showMobileMenu: false,
         }
+
+        this.toggleMenu = this.toggleMenu.bind(this);
+        this.handleOutsideClick = this.handleOutsideClick.bind(this);
     }
 
     componentDidMount() {
@@ -62,6 +66,27 @@ export default class Menu extends React.Component {
             desktopToggleBarArrow: !this.state.desktopToggleBarArrow,
             logoImage: !this.state.logoImage,
         })
+    };
+
+    toggleMenu = () => {
+
+        if (!this.state.showMobileMenu) {
+            document.addEventListener('click', this.handleOutsideClick, false);
+        } else {
+            document.removeEventListener('click', this.handleOutsideClick, false);
+        }
+
+        this.setState({
+            showMobileMenu: !this.state.showMobileMenu,
+        })
+    };
+
+    handleOutsideClick(e) {
+        if (this.node.contains(e.target)) {
+            return;
+        }
+
+        this.toggleMenu();
     }
 
     render() {
@@ -72,9 +97,11 @@ export default class Menu extends React.Component {
                     <Tab.Container>
                         <div className="menu__sidebar">
                             <div className="menu__sidebar__image">
-                                <img src={this.state.logoImage ? logoIcon : logo} alt="Example logo"/>
+                                <img src={this.state.logoImage || this.state.isMobile ? logoIcon : logo}
+                                     alt="Example logo"/>
                             </div>
-                            <Nav>
+                            <Nav ref={node => { this.node = node}}
+                                 className={this.state.showMobileMenu ? 'mm--active' : ''}>
                                 {this.state.menuItems.map((data) => (
                                     <Nav.Item key={data.id}>
                                         <Nav.Link eventKey={data.id} onClick={() => {
@@ -83,7 +110,13 @@ export default class Menu extends React.Component {
                                     </Nav.Item>
                                 ))}
                             </Nav>
-                            {this.state.isMobile ? '' : (
+                            {this.state.isMobile ? (
+                                <div className="menu__mobile-btn">
+                                    <FontAwesomeIcon
+                                        icon={faBars}
+                                        onClick={this.toggleMenu}/>
+                                </div>
+                            ) : (
                                 <div className="menu__desktop-btn">
                                     <FontAwesomeIcon
                                         icon={this.state.desktopToggleBarArrow ? faArrowRight : faArrowLeft}
