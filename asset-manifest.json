@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/frontend-app/static/css/main.56bbbd2e.chunk.css",
+    "main.js": "/frontend-app/static/js/main.9de1ae3a.chunk.js",
+    "main.js.map": "/frontend-app/static/js/main.9de1ae3a.chunk.js.map",
+    "runtime-main.js": "/frontend-app/static/js/runtime-main.25cbc7b2.js",
+    "runtime-main.js.map": "/frontend-app/static/js/runtime-main.25cbc7b2.js.map",
+    "static/css/2.b0bb7f2c.chunk.css": "/frontend-app/static/css/2.b0bb7f2c.chunk.css",
+    "static/js/2.b3bce070.chunk.js": "/frontend-app/static/js/2.b3bce070.chunk.js",
+    "static/js/2.b3bce070.chunk.js.map": "/frontend-app/static/js/2.b3bce070.chunk.js.map",
+    "index.html": "/frontend-app/index.html",
+    "precache-manifest.749e09ad5e715afd850d77e94bc2392f.js": "/frontend-app/precache-manifest.749e09ad5e715afd850d77e94bc2392f.js",
+    "service-worker.js": "/frontend-app/service-worker.js",
+    "static/css/2.b0bb7f2c.chunk.css.map": "/frontend-app/static/css/2.b0bb7f2c.chunk.css.map",
+    "static/css/main.56bbbd2e.chunk.css.map": "/frontend-app/static/css/main.56bbbd2e.chunk.css.map",
+    "static/media/example-svg.svg": "/frontend-app/static/media/example-svg.45f89513.svg",
+    "static/media/sample-image.png": "/frontend-app/static/media/sample-image.b1bdfe99.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.25cbc7b2.js",
+    "static/css/2.b0bb7f2c.chunk.css",
+    "static/js/2.b3bce070.chunk.js",
+    "static/css/main.56bbbd2e.chunk.css",
+    "static/js/main.9de1ae3a.chunk.js"
+  ]
+}
