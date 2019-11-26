@@ -25,6 +25,7 @@ export default class Menu extends React.Component {
 
         this.toggleMenu = this.toggleMenu.bind(this);
         this.handleOutsideClick = this.handleOutsideClick.bind(this);
+        window.addEventListener("load", this.updateWindowInnerWidth.bind(this));
     }
 
     componentDidMount() {
@@ -35,6 +36,14 @@ export default class Menu extends React.Component {
                 isMobile: window.innerWidth < 767
             });
         }, false);
+    }
+
+    updateWindowInnerWidth = () => {
+        if (window.innerWidth < 767) {
+            this.setState({
+                isMobile: true,
+            });
+        }
     }
 
     fetchData = () => {
@@ -92,16 +101,17 @@ export default class Menu extends React.Component {
     render() {
         return (
             <div className={!this.state.desktopToggleBar || this.state.isMobile ? '' : 'menu--showBar'}>
-                {console.log(window.innerWidth)}
                 <header className="menu ">
                     <Tab.Container>
                         <div className="menu__sidebar">
                             <div className="menu__sidebar__image">
-                                <img src={this.state.logoImage || this.state.isMobile ? logoIcon : logo}
+                                <img src={!this.state.logoImage || this.state.isMobile ? logo : logoIcon}
                                      alt="Example logo"/>
                             </div>
-                            <Nav ref={node => { this.node = node}}
-                                 className={this.state.showMobileMenu ? 'mm--active' : ''}>
+                            <Nav ref={node => {
+                                this.node = node
+                            }}
+                                 className={this.state.showMobileMenu && this.state.isMobile ? 'mm--active' : ''}>
                                 {this.state.menuItems.map((data) => (
                                     <Nav.Item key={data.id}>
                                         <Nav.Link eventKey={data.id} onClick={() => {

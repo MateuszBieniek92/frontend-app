@@ -3,7 +3,7 @@
 .menu {
   transition: .8s all;
   @media #{$screen-xs} {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 60px;
     background: white;
@@ -34,8 +34,8 @@
       overflow: hidden;
       transition: .5s all;
       @media #{$screen-xs} {
-        width: 50px;
-        height: 50px;
+        width: 200px;
+        height: 45px;
         padding: initial;
       }
       img {
@@ -54,20 +54,21 @@
       border-top: 1px solid $lightGreyColor;
       margin: -1em 0;
       @media #{$screen-xs} {
+        flex-wrap: nowrap;
         position: absolute;
         top: 70px;
         width: 100%;
         background: $whiteColor;
         border: none;
         left: 0;
-        transition:  max-height .5s ease-out;
+        transition: max-height .5s ease-out;
         max-height: 0;
         overflow: hidden;
       }
       &.mm--active {
         max-height: 500px;
         box-shadow: 0 450px 10px 400px rgba(0, 0, 0, 0.3);
-        transition:  max-height .5s ease-out;
+        transition: max-height .5s ease-out;
       }
       .nav-item {
         @media #{$screen-xs} {
@@ -113,6 +114,10 @@
     align-self: center;
     font-size: 2em;
     margin-right: .1em;
+    display: none;
+    @media #{$screen-xs} {
+      display: block;
+    }
   }
   &__content {
     flex-grow: 1;
@@ -125,6 +130,11 @@
     z-index: 2;
     height: 100vh;
     overflow-x: scroll;
+    transition: .3s all;
+    @media #{$screen-md} {
+      left: 30%;
+      width: 70%;
+    }
     @media #{$screen-xs} {
       width: 100%;
       left: 0;
@@ -141,6 +151,9 @@
     transition: .3s all;
     &:hover {
       color: $yellowColor;
+    }
+    @media #{$screen-xs} {
+      display: none;
     }
   }
 }
