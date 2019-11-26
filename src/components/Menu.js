@@ -83,10 +83,13 @@ export default class Menu extends React.Component {
                                     </Nav.Item>
                                 ))}
                             </Nav>
-                            <div className="menu__desktop-btn">
-                                <FontAwesomeIcon icon={this.state.desktopToggleBarArrow ? faArrowRight : faArrowLeft}
-                                                 onClick={this.toggleBar}/>
-                            </div>
+                            {this.state.isMobile ? '' : (
+                                <div className="menu__desktop-btn">
+                                    <FontAwesomeIcon
+                                        icon={this.state.desktopToggleBarArrow ? faArrowRight : faArrowLeft}
+                                        onClick={this.toggleBar}/>
+                                </div>
+                            )}
                         </div>
                         {this.state.showMenu ? (
                             <div className="menu__content">

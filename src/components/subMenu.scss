@@ -8,13 +8,17 @@
       list-style-type: none;
       border-bottom: 0;
       a {
-        padding: 0.8em 2em;
+        padding: .8em 2em;
         margin-right: 1em;
         color: $darkBlueColor;
         cursor: pointer;
         transition: .3s all;
         border-radius: 0;
         border: none;
+        @media #{$screen-xxs} {
+          padding: .5em 0.8em;
+          margin: 0 .5em .5em 0;
+        }
         &:before {
           width: 0;
           height: 0;
@@ -108,6 +112,14 @@
       padding: 0 1em;
       list-style-type: none;
       text-align: left;
+      @media #{$screen-xs} {
+        width: 33.333%;
+        margin-bottom: 1em;
+      }
+      @media #{$screen-xxs} {
+        width: 50%;
+      }
+
       &__header {
         color: $darkBlueColor;
         font-weight: 600;
