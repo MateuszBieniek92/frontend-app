@@ -26,7 +26,7 @@ const SubMenu = (props) => {
                                                     <ul className="group__list">
                                                         {group.groupElement.map((groupItem, id) => (
                                                             <li key={id} className="group-wrapper__list__item">
-                                                                <a href="#">{groupItem.name}</a>
+                                                                <a href={groupItem.name}>{groupItem.name}</a>
                                                             </li>
                                                         ))}
                                                     </ul>

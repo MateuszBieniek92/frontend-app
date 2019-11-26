@@ -100,7 +100,7 @@ export default class Menu extends React.Component {
 
     render() {
         return (
-            <div className={!this.state.desktopToggleBar || this.state.isMobile ? '' : 'menu--showBar'}>
+            <div className={!this.state.desktopToggleBar || this.state.isMobile ? 'app-wrapper' : 'menu--showBar'}>
                 <header className="menu ">
                     <Tab.Container>
                         <div className="menu__sidebar">

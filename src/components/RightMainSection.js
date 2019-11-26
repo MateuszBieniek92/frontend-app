@@ -6,7 +6,7 @@ function RightMainSection() {
     return (
         <section className="main-section">
             <div className="main-section__img-wrapper">
-                <img src={sampleImage} alt="sample-photo"/>
+                <img src={sampleImage} alt=""/>
             </div>
             <div className="main-section__text">
                 <h1>Sprawdzone rozwiązania dla Twojej firmy</h1>

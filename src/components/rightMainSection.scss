@@ -5,7 +5,7 @@
   width: 80%;
   left: 20%;
   top: 0;
-  height: 100vh;
+  height: 100%;
   transition: .5s all;
   @media #{$screen-md} {
     width: 70%;
@@ -83,7 +83,7 @@
       cursor: pointer;
       transition: .3s all;
       &:hover {
-        background: darken($yellowColor,8);
+        background: darken($yellowColor, 8);
       }
       @media #{$screen-xs} {
         padding: 0.8em 3em;
